@@ -10,7 +10,7 @@ router.get(`/`, async (req, res) => {
   res.send(productList);
 });
 
-router.post(`/`, (req, res) => {
+router.post(`/`, async (req, res) => {
   const product = new Product({
     name: req.body.name,
     image: req.body.image,
